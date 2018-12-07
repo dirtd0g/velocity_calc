@@ -1,0 +1,66 @@
+#simple agile team velocity calulator
+#Andy Szaniawski
+#20181130
+
+
+ #first take in three parameters
+ #also perhaps come up with a menu at some point for adding to a running sprint calulation
+    #'''
+    #Welcome
+    #'''
+menu_selection = 0
+#simple menu
+
+menu_selection = input('''
+Welcome to the Sprint Velocity Calculator
+Please select from the following options
+1 - New Team 
+2 - Existing Team
+3 - Quit
+''')
+team_name = []
+
+menu_selection = int(menu_selection)
+
+#enter new team
+while menu_selection > 0:
+    if menu_selection == 1: 
+        sprint_one = int(input('Enter in the first Sprint story points completed:'))
+        sprint_two = int(input('Enter the second sprints story points completed:'))
+        sprint_three = int(input('Enter the third sprints story points completed: '))
+        avg_velocity = (sprint_one + sprint_two + sprint_three)/3
+        print('Average Velocity is:', avg_velocity)
+        break
+    elif menu_selection == 2:
+        input_team_name = input('Enter the team name: ')
+        team_name.append(input_team_name)
+        print(team_name)
+        break
+        
+    #elif menu_selection == 3:
+    #    pass   
+
+#while menu_selection == 2
+#    input_team_name = input('enter the team name';)
+#        team_name.append(input_team_name)
+
+#return menu selction to use function to add/stor/change team 
+
+
+#sprint_one = int(input('Enter in the first Sprint story points completed:'))
+#sprint_two = int(input('Enter the second sprints story points completed:'))
+#sprint_three = int(input('Enter the third sprints story points completed: '))
+
+#define the function for sprint calculation 
+def sprint_calc(sprint_one, sprint_two, sprint_three):
+    pass
+
+avg_velocity = (sprint_one + sprint_two + sprint_three)/3
+print('Average Velocity is:', avg_velocity)
+
+#todo
+#team name
+#add in ability to store data
+#add in ability to look into past sprints
+#add ability to query JIRA API
+
